@@ -1,0 +1,74 @@
+pacages iTunesAPI;
+import java.io. IOException;
+
+public class SearchiTunesAPI{
+    public String search(String value){
+    CloseableHttpClient client = HttpClientBuilder.create().build();
+    try{
+    HttpGet getRequest = new HttpGet ("http://itunes.apple.com/search?"+value);
+    HttpResonse httpResponse = client.excute(getRequest);
+    HttpEntity entity = httpResponse.getEntity();
+    return EntityUtils.toString(entity);
+    }catch (Exception e){
+         e.printStacktRACE();
+         }FINALLY{
+         //client.close()
+         clent.getConnectionManaget().shutdown();
+         }
+         return null
+         }
+         }
+         
+         //Class for testing
+         
+        package iTunesAPI;
+        import org.junit.Assert;
+        
+        public class testiTunesSearchAPI{
+        @Test
+        public void testingValidTermParameter(){
+        String response = new SearchiTunesAPI().search("jackJohnson");
+        Assert.asserNotNull(response);
+        Assert.assertTrue(response.contains("resultCount\":0"));
+        Assert.assertTrue(response.contains("results\":[]"));
+        }
+        @Test
+        public void testingInvalidTermParameter(){
+        String response = new SearchiTunesAPI().search("--53avbd");
+        Assert.assertNotNull(response);
+        Assert.assertTrue(response.contains("resultCount\":0));
+        Assert.assertTrue(resonse.contains(result\":[]"));
+        }
+        @Test
+        public void testingInvalidCountryCode(){
+        String response = new SearchiTunesAPI().search("123bau");
+        Assert.assertNotNull(response);
+        Assert.assertTrue(response.contains("resultCount\":0));
+        Assert.assertTrue(response.contains("results\": []"));
+        }
+        @Test
+        public void testingValidMediaTypeParameter(){
+          String response = new SearchiTunesAPI().search("");
+          Assert.assertNotNull(response);
+          Assert.assertTrue(response.contains("resultCount\":0"));
+          Assert.assertTrue(response.contains("results\": []"));
+          }
+          @Test
+          public void testingInvalidLimitParameter("abcd"){
+             String response = new SearchiTunesAPI().search("");
+             Assert.assertNotNull(response);
+             Assert.assertTrue(response.contains("resultCount\":0"));
+             Assert.assertTrue(response.Contains("results\": []"));
+             }
+             @Test
+             public void testingMissingParameter (){
+             String response = new SearchiTunesAPI.search("");
+             Assert.assertNotNull(response);
+             Assert.asserTrue(response.contains("resultCount\":0"));
+             Assert.assertTrue(response.contains("results\": []"));
+             }
+             }
+         
+         
+         
+    
