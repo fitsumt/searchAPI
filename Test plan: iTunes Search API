@@ -1,0 +1,105 @@
+Test plan: iTunes Search API
+Prepared by: Fitsum Woldemariam
+Date: 03/06/17
+Table contents
+1.0 Introduction
+2.0 Objectives and Tasks
+2.1 Objectives
+2.2 Tasks
+3.0 Scope
+4.0 Test Strategy
+4.1 Functional Testing
+4.1.0 Positive Testing
+4.1.1 Negative Testing
+5.0 Hardware requirements
+6.0 Software requirements
+7.0 Test Schedule
+8.0 Features to be Tested
+8.0.1 Report a Bug
+8.0.2 Change request
+9.0 Test data
+10.0 Risk/Assumptions
+11.0 Tools
+12.0 Approvals
+      1.0 Intriduction
+This project is to test the search feature if the iTune, iBooks, App and Mac App strore.
+Version Number: N/A
+Request Header: 
+URL: https://itunes.apple.com/search?parameterkeyvalue
+Message id:
+Get Request
+Response Header
+  2.0 Objectives and Tasks
+2.1 Objectives
+The objective of this project is to verify and validate the iTunes Search API gives a response to the corresponding request
+2.2 Tasks
+Uderstand the requirement document, design doc, and functional documents
+Functional testing
+Smoke Testing
+Create Test Scenario, Test case, find a bug
+Regression Testing
+Performance Testing
+Close a bug
+  3.0 Scope
+QA Testing is focused on Functional, smoke, Performance and regression testing
+  4.0 Test Strategy
+Tools such as ReadyAPI or SoapUI Pro, Jmeter will be used for QA Testing
+Get request method is used to call for iTunes Search API
+4.1 Functional Testing
+4.10 Positive Testing
+TestCase1) (Required) Enter a valid text string for instance 'jack+johnson' into iTunesSearchAPI of term parameter, then make request, 
+http status code should give 200 or OK message
+TestCase2) (Optional) Enter a valid country code for instance 'US' into iTunesSearchAPI of country parameter, then make a request, 
+http status code should give 200 or OK message
+TestCase3) (Optional)Enter a valid media type for instance 'movie' into iTunesSearchAPI limit papameter, make a request,
+http status code should give 200 or OK message
+TestCase4) (Optional) Enter a valid limit for instance '25' into iTunesSearchAPI limit parameter, make a request
+http status code should give200 or OK message
+4.1.1 Negative Testing
+testCase5) (Required) Enter an Invalid test string for instance '-0+3242'into iTunesSearhAPI to term parameter, make a request
+http status code should give a Bad Request message
+TestCase6) (Optional)Enter an Invalid country code for instance '1234' into  iTunesSearchAPI into parameter, then make a requet,
+http status code should give Bad Request
+TestCase7)(Optional)Enter an Invalid media type parameter, the make a request
+http status code should give a Bad Request
+TestCase8) (Optional)Enter an Invalid limit for instance 'abcd' into the ItunesSearchAPI into limit parameter, then make a request,
+http status code should give a Bad Request
+TestCase9) (Required)Enter no value (no parameter) into iTunesSearchAPI prameter, then make a request
+http status code should give a Bad Request message
+  5.0 Hardware Requirements
+Computer or Laptop, modem, network cable
+  6.0 Software requirements
+ReadyAPI (SoapUI pro)
+JIRA
+iOS OS
+  7.0 Test Schedule
+Test Plan 3/6/17
+TestCase 3/7/17
+TestReport 3/10/17
+  8.0 Features to be tested
+The web service feature for the iTunes Serach API will be tested.
+The operation used is Get
+8.0.1 Report a Bug
+Use JIRA to create a bug and assign it to Dev team. Once the bug is fixed,retest the bug and close the bug if the issue is fixed
+8.0.2 Change request
+Make an edtion to saved test cases and test scenarios if there is update in the functional design document
+  9.0 Test Data
+Valid Data: jack+johnson, US, mOVIES, 25
+Invalid Data: 43644hdgd, no parameter,--63hdg--
+  10.0 Risk / Assumptions
+Smoke testing would require much of QA time, therefore additional hourse are requred for testing. On the other hand, Functional
+testing should take less of QA. A delay in QA testing might affect the performance of Dev and UAT team so QA task should finish on time
+  11.0 Tools
+ReadyAPI, SoapUI pro, JIRA, Jmeter, Snipping tool, SVN, MS-Excell
+  12.0 Apprvals
+Fitsum
+3/6/17
+
+
+
+
+
+
+4.0 T
+
+
